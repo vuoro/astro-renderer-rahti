@@ -17,10 +17,11 @@ const renderToStaticMarkup = (effect, props, childHtml) => {
 
 const handleResult = (result) => {
   let markup = "";
+  const resultType = typeof result;
 
-  if (result instanceof ServerElement || typeof result === "string") {
+  if (result instanceof ServerElement || resultType === "string") {
     markup += result;
-  } else if (result.type === "object" && Symbol.iterator in result) {
+  } else if (resultType === "object" && Symbol.iterator in result) {
     for (const child of result) {
       markup += handleResult(child);
     }
