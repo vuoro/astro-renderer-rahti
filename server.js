@@ -9,12 +9,12 @@ const renderToStaticMarkup = (effect, props, childHtml) => {
     childFragment.append(childHtml);
   }
 
-  const root = createRoot(new ServerElement());
+  const rootElement = new ServerElement();
+  const root = createRoot(rootElement);
 
-  const result = effect(root, props, childFragment);
-  const stringResult = handleResult(result);
+  effect(root, props, childFragment);
 
-  return { html: stringResult };
+  return { html: handleResult(rootElement) };
 };
 
 const handleResult = (result) => {
