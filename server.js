@@ -6,7 +6,7 @@ const renderToStaticMarkup = (effect, props, childHtml) => {
   let childFragment;
   if (childHtml) {
     childFragment = html["astro-fragment"]();
-    childFragment.children.push(childHtml);
+    childFragment.append(childHtml);
   }
 
   const root = createRoot(new ServerElement());
