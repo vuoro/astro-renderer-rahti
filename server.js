@@ -10,9 +10,11 @@ const renderToStaticMarkup = (effect, props, childHtml) => {
   }
 
   const root = createRoot(new ServerElement());
-  const result = effect(root, props, childFragment);
 
-  return handleResult(result);
+  const result = effect(root, props, childFragment);
+  const stringResult = handleResult(result);
+
+  return { html: stringResult };
 };
 
 const handleResult = (result) => {

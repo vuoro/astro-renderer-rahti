@@ -1,15 +1,18 @@
-import { html, createRoot, ServerElement } from "@vuoro/rahti";
+import { createRoot } from "@vuoro/rahti";
+
+const parser = new DOMParser();
 
 export default (element) => {
   const root = createRoot(element);
 
   return (effect, props, childHtml) => {
-    let childFragment;
+    const children = [];
+
     if (childHtml) {
-      childFragment = html["astro-fragment"]();
-      childFragment.innerHTML = childHtml;
+      const childDocument = parser.parseFromString(childHtml, "text/html");
+      children.push(...childDocument.body.childNodes);
     }
 
-    effect(root, props, childFragment);
+    effect(root, props, children);
   };
 };
