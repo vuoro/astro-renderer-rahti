@@ -1,6 +1,6 @@
 {
   "name": "@vuoro/astro-renderer-rahti",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Rahti renderer for Astro",
   "main": "index.js",
   "type": "module",
@@ -21,11 +21,19 @@
     "type": "git",
     "url": "git+https://github.com/vuoro/astro-renderer-rahti.git"
   },
+  "keywords": [
+    "reactive",
+    "javascript",
+    "rahti"
+  ],
   "license": "MIT",
   "devDependencies": {
     "eslint": "^8.3.0"
   },
-  "eslint": {
+  "prettier": {
+    "printWidth": 100
+  },
+  "eslintConfig": {
     "env": {
       "browser": true,
       "es2021": true
