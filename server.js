@@ -1,6 +1,6 @@
-import { identifier, html, createRoot, ServerElement } from "@vuoro/rahti";
+import { ssrIdentifier, html, createRoot, ServerElement } from "@vuoro/rahti";
 
-const check = (effect) => !!effect[identifier];
+const check = (effect) => effect[ssrIdentifier];
 
 const renderToStaticMarkup = (effect, props, childHtml) => {
   let childFragment;
