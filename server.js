@@ -1,4 +1,6 @@
-import { html, createRoot, ServerElement, isRahti } from "@vuoro/rahti";
+import { identifier, html, createRoot, ServerElement } from "@vuoro/rahti";
+
+const check = (effect) => !!effect[identifier];
 
 const renderToStaticMarkup = (effect, props, childHtml) => {
   let childFragment;
@@ -31,6 +33,6 @@ const handleResult = (result) => {
 };
 
 export default {
-  check: isRahti,
+  check,
   renderToStaticMarkup,
 };
