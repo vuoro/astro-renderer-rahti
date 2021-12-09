@@ -15,7 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vuoro/rahti": "^0.1.0"
+    "@vuoro/rahti": "^0.1.13"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.3.0"
+    "eslint": "^8.4.1"
   },
   "prettier": {
     "printWidth": 100
