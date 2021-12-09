@@ -1,6 +1,6 @@
 {
   "name": "@vuoro/astro-renderer-rahti",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Rahti renderer for Astro",
   "main": "index.js",
   "type": "module",
