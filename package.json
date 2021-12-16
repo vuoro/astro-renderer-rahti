@@ -1,6 +1,6 @@
 {
   "name": "@vuoro/astro-renderer-rahti",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Rahti renderer for Astro",
   "main": "index.js",
   "type": "module",
@@ -15,7 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vuoro/rahti": "^0.1.13"
+    "@vuoro/rahti": "^0.1.18"
   },
   "repository": {
     "type": "git",
